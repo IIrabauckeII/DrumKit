@@ -1,11 +1,17 @@
 const buttons = document.querySelectorAll('.key');
-const kick = document.getElementById('kick');
+
 buttons.forEach((button) => {
   button.addEventListener('click', (e) => {
-    kick.play()
+    let target = document.getElementById(button.innerHTML.toLowerCase());
+    target.play();
   })
 });
 
 document.addEventListener('keydown', (e) => {
-  if(e.code == "KeyA") {kick.play()};
+  if (['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'].includes(e.key)
+) {
+    let target = document.getElementById(e.key);
+    target.play();
+
+  }
 });

@@ -21,11 +21,11 @@ h1 {
 }
 
 .key {
-  border: 1.2px solid #FCA622;
+  border: 1.2px solid rgb(252,166,34);
   border-radius: 10%;
   padding: 1rem;
-  width: 1.75rem;
-  height: 1.75rem;
+  min-width: 1.75rem;
+  min-height: 1.75rem;
   margin: 0.75rem;
   display: inline-flex;
   justify-content: center;
@@ -38,6 +38,9 @@ h1 {
 }
 
 .key:hover {
-  transform: scale(1.1);
+  transform: scale(1.15);
+  background-color: rgba(252,166,34,0.4);
+  border-color: black;
   cursor: pointer;
+;
 }
