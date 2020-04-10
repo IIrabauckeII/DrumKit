@@ -34,7 +34,8 @@ h1 {
   color: white;
   font-weight: bold;
   font-family: 'Roboto Slab', serif;
-  background-color: rgba(0, 0, 0, 0.5)
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.07s;
 }
 
 .key:hover {
@@ -45,19 +46,7 @@ h1 {
 }
 
 .keyDown {
-  border: 1.2px solid black;
-  border-radius: 10%;
-  padding: 1rem;
-  min-width: 1.75rem;
-  min-height: 1.75rem;
-  margin: 0.75rem;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  vertical-align: middle;
-  color: white;
-  font-weight: bold;
-  font-family: 'Roboto Slab', serif;
   transform: scale(1.15);
   background-color: rgba(252,166,34,0.4);
+  border-color: black;
 }

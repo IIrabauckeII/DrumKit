@@ -11,13 +11,19 @@ document.addEventListener('keydown', (e) => {
   if (['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'].includes(e.key)
 ) {
     let targetSound = document.getElementById(e.key + 'Sound');
+    targetSound.currentTime = 0;
     targetSound.play();
-/*    let targetKey = document.getElementById(e.key + 'Key');
-    targetKey.style.background = "rgba(252,166,34,0.4)";
-    targetKey.style.transform = "scale(1.15)";
-    targetKey.style['border-color'] = "black";*/
-    document.getElementById(e.key + 'Key').className = "keyDown";
-    setTimeout(function(){
-      document.getElementById(e.key + 'Key').className = "key"}, 400);
+    document.getElementById(e.key + 'Key').classList.add("keyDown");
   }
+});
+
+undoTransition = (e) => {
+  if (e.propertyName !== "transform") {
+    return
+  }
+  document.getElementById(e.target.id).classList.remove("keyDown");
+}
+
+buttons.forEach((button) => {
+  button.addEventListener('transitionend', undoTransition)
 });
